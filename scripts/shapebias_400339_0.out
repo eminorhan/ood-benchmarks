@@ -1,0 +1,4 @@
+Using cache found in /misc/vlgscratch4/LakeGroup/emin/robust_vision/pretrained_models/facebookresearch_WSL-Images_master
+Loaded model: resnext101_32x48d_wsl
+Correct: 0.6419650291423813 Shape: 0.4280155642023346 Texture: 0.5719844357976653
+Done

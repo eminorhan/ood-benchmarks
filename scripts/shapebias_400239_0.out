@@ -1,0 +1,4 @@
+Using cache found in /misc/vlgscratch4/LakeGroup/emin/robust_vision/pretrained_models/rwightman_gen-efficientnet-pytorch_master
+Loaded model: tf_efficientnet_l2_ns
+Correct: 0.8476269775187344 Shape: 0.3899803536345776 Texture: 0.6100196463654224
+Done
