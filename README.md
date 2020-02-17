@@ -1,20 +1,28 @@
-# Robustness properties of Facebook's ResNeXt WSL models
-The code here can be used to reproduce the results reported in the following paper:
+# Out-of-distribution generalization benchmarks for image recognition models
+This repository contains code for evaluating the out-of-distribution generalization performance of various image recognition models. Currently, performance on the following benchmarks are evaluated:
 
-Orhan AE (2019) [Robustness properties of Facebook's ResNeXt WSL models.](https://arxiv.org/abs/1907.07640) arXiv:1907.07640.
+* [ImageNet-C](https://github.com/hendrycks/robustness)
+* [ImageNet-P](https://github.com/hendrycks/robustness)
+* [ImageNet-A](https://github.com/hendrycks/natural-adv-examples)
+* [ImageNet-Sketch](https://github.com/HaohanWang/ImageNet-Sketch)
+* [Stylized ImageNet](https://github.com/rgeirhos/texture-vs-shape/tree/master/stimuli/style-transfer-preprocessed-512)
+* Adversarial robustness
 
-All simulation results reported in the paper are provided in the [`results`](https://github.com/eminorhan/resnext-wsl/tree/master/results) folder. 
+All simulation results reported on this page are provided in the [`results`]() folder. 
 
 ## Requirements
-* torch == 1.1.0
-* torchvision == 0.3.0
+The code was written and tested with:
+
+* torch == 1.3.0
+* torchvision == 0.4.0
 * foolbox == 1.8.0
-* ImageNet validation data in its standard directory structure.
-* [ImageNet-C and ImageNet-P](https://github.com/hendrycks/robustness) data in their standard directory structure.
-* [ImageNet-A](https://github.com/hendrycks/natural-adv-examples) data in its standard directory structure.
+
+Other versions may or may not work. In addition, you will need to download the datasets listed above in order to replicate the results.
+
+## Results
 
 ## Replication
-In total, there are eight experiments reported in the paper. They can be reproduced as follows:
+The results reported on this page can be reproduced as follows:
 
 1. To evaluate the ImageNet validation accuracy of the models, run [`evaluate_validation.py`](https://github.com/eminorhan/resnext-wsl/blob/master/evaluate_validation.py), e.g.:
 ```
