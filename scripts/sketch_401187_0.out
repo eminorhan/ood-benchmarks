@@ -1,0 +1,6 @@
+Using cache found in /misc/vlgscratch4/LakeGroup/emin/robust_vision/pretrained_models/rwightman_gen-efficientnet-pytorch_master
+Downloading: "https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/tf_efficientnet_b6_ns-51548356.pth" to /home/eo41/.cache/torch/checkpoints/tf_efficientnet_b6_ns-51548356.pth
+Loaded model: tf_efficientnet_b6_ns
+Test: [   0/1414]	Time 26.643 (26.643)	Acc@1  47.22 ( 47.22)
+Test: [  10/1414]	Time  3.587 ( 3.595)	Acc@1  80.56 ( 59.60)
+Test: [  20/1414]	Time  1.209 ( 2.703)	Acc@1   0.00 ( 48.81)
