@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --nodes=1
-#SBATCH --exclude=vine3,vine11
+#SBATCH --exclude=vine3,vine11,vine12
 ##SBATCH --ntasks=1
 #SBATCH --gres=gpu:4
 ##SBATCH --cpus-per-task=1
@@ -20,6 +20,7 @@ module load cuda-10.0
 source /home/eo41/venv/bin/activate
 
 #python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'tf_efficientnet_l2_ns' --im-size 800
-python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'resnext101_32x48d_wsl'
+python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'tf_efficientnet_l2_ns_475' --im-size 475
+#python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'resnext101_32x48d_wsl'
 
 echo "Done"
