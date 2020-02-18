@@ -1,2 +1,10 @@
 Using cache found in /misc/vlgscratch4/LakeGroup/emin/robust_vision/pretrained_models/rwightman_gen-efficientnet-pytorch_master
 Loaded model: tf_efficientnet_b6_ns
+Correct: 0.7102414654454621 Shape: 0.3505275498241501 Texture: 0.64947245017585
+Using cache found in /misc/vlgscratch4/LakeGroup/emin/robust_vision/pretrained_models/rwightman_gen-efficientnet-pytorch_master
+Downloading: "https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/tf_efficientnet_b5_ns-6f26d0cf.pth" to /home/eo41/.cache/torch/checkpoints/tf_efficientnet_b5_ns-6f26d0cf.pth
+Loaded model: tf_efficientnet_b5_ns
+Correct: 0.6644462947543713 Shape: 0.3233082706766917 Texture: 0.6766917293233082
+Using cache found in /misc/vlgscratch4/LakeGroup/emin/robust_vision/pretrained_models/rwightman_gen-efficientnet-pytorch_master
+Downloading: "https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/tf_efficientnet_b4_ns-d6313a46.pth" to /home/eo41/.cache/torch/checkpoints/tf_efficientnet_b4_ns-d6313a46.pth
+Loaded model: tf_efficientnet_b4_ns
