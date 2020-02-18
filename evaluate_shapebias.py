@@ -13,7 +13,7 @@ parser.add_argument('data', metavar='DIR', help='path to dataset')
 parser.add_argument('--model-name', type=str, default='resnext101_32x16d_wsl',
                     choices=['resnext101_32x8d', 'resnext101_32x8d_wsl', 'resnext101_32x16d_wsl',
                              'resnext101_32x32d_wsl', 'resnext101_32x48d_wsl', 'tf_efficientnet_l2_ns',
-                             'tf_efficientnet_l2_ns_475'], help='evaluated model')
+                             'tf_efficientnet_l2_ns_475', 'tf_efficientnet_b7_ns'], help='evaluated model')
 parser.add_argument('--workers', default=4, type=int, help='no of data loading workers')
 parser.add_argument('--batch-size', default=36, type=int, help='mini-batch size')
 parser.add_argument('--gpu', default=0, type=int, help='GPU id to use.')

@@ -122,6 +122,8 @@ def load_model(model_name):
         model = torch.hub.load('rwightman/gen-efficientnet-pytorch', 'tf_efficientnet_l2_ns', pretrained=True)
     elif model_name == 'tf_efficientnet_l2_ns_475':
         model = torch.hub.load('rwightman/gen-efficientnet-pytorch', 'tf_efficientnet_l2_ns_475', pretrained=True)
+    elif model_name == 'tf_efficientnet_b7_ns':
+        model = torch.hub.load('rwightman/gen-efficientnet-pytorch', 'tf_efficientnet_b7_ns', pretrained=True)
     else:
         raise ValueError('Model not available.')
 
