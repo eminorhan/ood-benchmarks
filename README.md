@@ -11,10 +11,10 @@ This repository contains code for evaluating the out-of-distribution generalizat
 The following models are currently evaluated:
 
 * `resnext101_32x48d_wsl`: the largest ResNeXt-WSL model released by Facebook AI (res: 224)
-* `resnext101_32x32d_wsl`: ResNeXt-WSL model released by Facebook AI (res: 224)
-* `resnext101_32x16d_wsl`: ResNeXt-WSL model released by Facebook AI (res: 224)
-* `resnext101_32x8d_wsl`: ResNeXt-WSL model released by Facebook AI (res: 224)
-* `resnext101_32x8d`: ImageNet pre-trained ResNeXt model released by Facebook AI (res: 224)
+* `resnext101_32x32d_wsl`: second largest ResNeXt-WSL model released by Facebook AI (res: 224)
+* `resnext101_32x16d_wsl`: third largest ResNeXt-WSL model released by Facebook AI (res: 224)
+* `resnext101_32x8d_wsl`: fourth largest ResNeXt-WSL model released by Facebook AI (res: 224)
+* `resnext101_32x8d`: ImageNet pre-trained ResNeXt model (res: 224)
 * `tf_efficientnet_l2_ns`: the largest noisy student model released by Google AI (res: 800)
 * `tf_efficientnet_l2_ns_475`: lower resolution version of the above (res: 475)
 * `tf_efficientnet_b7_ns`: noisy student model with B7 backbone (res: 600)
