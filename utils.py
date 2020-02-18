@@ -113,31 +113,13 @@ def load_model(model_name):
     torch_hub_dir = '/misc/vlgscratch4/LakeGroup/emin/robust_vision/pretrained_models'
     torch.hub.set_dir(torch_hub_dir)
 
-    if model_name in ['resnext101_32x8d_wsl', 'resnext101_32x16d_wsl', 'resnext101_32x32d_wsl',
-                      'resnext101_32x48d_wsl']:
-        model = torch.hub.load('facebookresearch/WSL-Images', model_name)
-    elif model_name == 'resnext101_32x8d':
-        model = torchvision.models.resnext101_32x8d(pretrained=True)
-    elif model_name == 'tf_efficientnet_l2_ns':
-        model = torch.hub.load('rwightman/gen-efficientnet-pytorch', 'tf_efficientnet_l2_ns', pretrained=True)
-    elif model_name == 'tf_efficientnet_l2_ns_475':
-        model = torch.hub.load('rwightman/gen-efficientnet-pytorch', 'tf_efficientnet_l2_ns_475', pretrained=True)
-    elif model_name == 'tf_efficientnet_b7_ns':
-        model = torch.hub.load('rwightman/gen-efficientnet-pytorch', 'tf_efficientnet_b7_ns', pretrained=True)
-    elif model_name == 'tf_efficientnet_b6_ns':
-        model = torch.hub.load('rwightman/gen-efficientnet-pytorch', 'tf_efficientnet_b6_ns', pretrained=True)
-    elif model_name == 'tf_efficientnet_b5_ns':
-        model = torch.hub.load('rwightman/gen-efficientnet-pytorch', 'tf_efficientnet_b5_ns', pretrained=True)
-    elif model_name == 'tf_efficientnet_b4_ns':
-        model = torch.hub.load('rwightman/gen-efficientnet-pytorch', 'tf_efficientnet_b4_ns', pretrained=True)
-    elif model_name == 'tf_efficientnet_b3_ns':
-        model = torch.hub.load('rwightman/gen-efficientnet-pytorch', 'tf_efficientnet_b3_ns', pretrained=True)
-    elif model_name == 'tf_efficientnet_b2_ns':
-        model = torch.hub.load('rwightman/gen-efficientnet-pytorch', 'tf_efficientnet_b2_ns', pretrained=True)
-    elif model_name == 'tf_efficientnet_b1_ns':
-        model = torch.hub.load('rwightman/gen-efficientnet-pytorch', 'tf_efficientnet_b1_ns', pretrained=True)
-    elif model_name == 'tf_efficientnet_b0_ns':
-        model = torch.hub.load('rwightman/gen-efficientnet-pytorch', 'tf_efficientnet_b0_ns', pretrained=True)
+    if model_name.startswith('resnext101'):
+        if model_name == 'resnext101_32x8d':
+            model = torchvision.models.resnext101_32x8d(pretrained=True)
+        else:
+            model = torch.hub.load('facebookresearch/WSL-Images', model_name)
+    elif model_name.startswith('tf_efficientnet'):
+        model = torch.hub.load('rwightman/gen-efficientnet-pytorch', model_name, pretrained=True)
     else:
         raise ValueError('Model not available.')
 
