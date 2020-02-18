@@ -26,7 +26,7 @@ The code was written and tested with:
 Other versions may or may not work. In addition, you will need to download the datasets listed above in order to replicate the results.
 
 ## Results
-| Model | Stylized ImageNet | ImageNet-Sketch  | ImageNet-A | ImageNet-C | ImageNet-P | Adv. accuracy |
+| Model | Stylized ImageNet | ImageNet Sketch  | ImageNet-A | ImageNet-C | ImageNet-P | Adv. accuracy |
 | ----- |:-----------------:| ----------------:| ---------: | ---------: | ---------: | ---------: |
 | `resnext101_32x48d_wsl`     | 42.8 | 59.1 | TBD | TBD | TBD | TBD |
 | `tf_efficientnet_l2_ns`     | 39.0 | 52.7 | TBD | TBD | TBD | TBD |
