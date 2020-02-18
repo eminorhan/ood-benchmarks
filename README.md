@@ -11,16 +11,16 @@ This repository contains code for evaluating the out-of-distribution generalizat
 The following models are currently evaluated:
 
 * `resnext101_32x48d_wsl`: the largest ResNeXt-WSL model released by Facebook AI Research.
-* `tf_efficientnet_l2_ns`: the largest noisy student model released by Google AI.
-* `tf_efficientnet_l2_ns_475`: lower resolution version of the above.
-* `tf_efficientnet_b7_ns`: noisy student model with B7 backbone.
-* `tf_efficientnet_b6_ns`: noisy student model with B6 backbone.
-* `tf_efficientnet_b5_ns`: noisy student model with B5 backbone.
-* `tf_efficientnet_b4_ns`: noisy student model with B4 backbone.
-* `tf_efficientnet_b3_ns`: noisy student model with B3 backbone.
-* `tf_efficientnet_b2_ns`: noisy student model with B2 backbone.
-* `tf_efficientnet_b1_ns`: noisy student model with B1 backbone.
-* `tf_efficientnet_b0_ns`: noisy student model with B0 backbone.
+* `tf_efficientnet_l2_ns`: the largest noisy student model released by Google AI (res: 800).
+* `tf_efficientnet_l2_ns_475`: lower resolution version of the above (res: 475).
+* `tf_efficientnet_b7_ns`: noisy student model with B7 backbone (res: 600).
+* `tf_efficientnet_b6_ns`: noisy student model with B6 backbone (res: 528).
+* `tf_efficientnet_b5_ns`: noisy student model with B5 backbone (res: 456).
+* `tf_efficientnet_b4_ns`: noisy student model with B4 backbone (res: 380).
+* `tf_efficientnet_b3_ns`: noisy student model with B3 backbone (res: 300).
+* `tf_efficientnet_b2_ns`: noisy student model with B2 backbone (res: 260).
+* `tf_efficientnet_b1_ns`: noisy student model with B1 backbone (res: 240).
+* `tf_efficientnet_b0_ns`: noisy student model with B0 backbone (res: 224).
 
 All simulation results reported on this page can be found in the [`results`](https://github.com/eminorhan/ood-benchmarks/tree/master/results) folder. 
 
@@ -40,8 +40,8 @@ Other versions may or may not work. In addition, you will need to download the d
 | `tf_efficientnet_l2_ns`     | TBD | TBD | TBD | TBD | 39.0 | 52.7 | TBD |
 | `tf_efficientnet_l2_ns_475` | TBD | TBD | TBD | TBD | 61.8 | 53.6 | TBD |
 | `tf_efficientnet_b7_ns`     | TBD | TBD | TBD | TBD | 44.1 | 48.3 | TBD |
-| `tf_efficientnet_b6_ns`     | TBD | TBD | TBD | TBD | TBD  | TBD  | TBD |
-| `tf_efficientnet_b5_ns`     | TBD | TBD | TBD | TBD | TBD  | TBD  | TBD |
+| `tf_efficientnet_b6_ns`     | TBD | TBD | TBD | TBD | 35.1 | TBD  | TBD |
+| `tf_efficientnet_b5_ns`     | TBD | TBD | TBD | TBD | 32.3 | TBD  | TBD |
 | `tf_efficientnet_b4_ns`     | TBD | TBD | TBD | TBD | TBD  | TBD  | TBD |
 | `tf_efficientnet_b3_ns`     | TBD | TBD | TBD | TBD | TBD  | TBD  | TBD |
 | `tf_efficientnet_b2_ns`     | TBD | TBD | TBD | TBD | TBD  | TBD  | TBD |
