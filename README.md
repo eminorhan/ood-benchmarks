@@ -26,11 +26,11 @@ The code was written and tested with:
 Other versions may or may not work. In addition, you will need to download the datasets listed above in order to replicate the results.
 
 ## Results
-| Model | Stylized IN | IN-Sketch  | IN-A | IN-C | IN-P | Adv. acc. | IN |
-| ----- |:-----------------:| ----------------:| ---------: | ---------: | ---------: | ---------: | ---------: |
-| `resnext101_32x48d_wsl`     | 42.8 | 59.1 | TBD | TBD | TBD | TBD | TBD |
-| `tf_efficientnet_l2_ns`     | 39.0 | 52.7 | TBD | TBD | TBD | TBD | TBD |
-| `tf_efficientnet_l2_ns_475` | 61.8 | 53.6 | TBD | TBD | TBD | TBD | TBD |
+| Model | IN | IN-A | IN-C | IN-P | Stylized IN | IN-Sketch | Adv. acc. |
+| ----- |:--:|:----:|:----:|:----:|:-----------:|:---------:|:---------:|
+| `resnext101_32x48d_wsl`     | TBD | TBD | TBD | TBD | 42.8 | 59.1 | TBD |
+| `tf_efficientnet_l2_ns`     | TBD | TBD | TBD | TBD | 39.0 | 52.7 | TBD |
+| `tf_efficientnet_l2_ns_475` | TBD | TBD | TBD | TBD | 61.8 | 53.6 | TBD |
 
 ## Replication
 The results reported on this page can be reproduced as follows:
