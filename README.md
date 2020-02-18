@@ -26,11 +26,11 @@ The code was written and tested with:
 Other versions may or may not work. In addition, you will need to download the datasets listed above in order to replicate the results.
 
 ## Results
-| Model         | Stylized ImageNet            | ImageNet-Sketch  |
-| ------------- |:-------------:| -----:|
-| `resnext101_32x48d_wsl`     | 42.8 | 59.1 |
-| `tf_efficientnet_l2_ns`     | 39.0 | 52.7 |
-| `tf_efficientnet_l2_ns_475` | 61.8 | 53.6 |
+| Model | Stylized ImageNet | ImageNet-Sketch  | ImageNet-A | ImageNet-C | ImageNet-P |
+| ----- |:-----------------:| ----------------:| ---------: | ---------: | ---------: |
+| `resnext101_32x48d_wsl`     | 42.8 | 59.1 | TBD | TBD | TBD |
+| `tf_efficientnet_l2_ns`     | 39.0 | 52.7 | TBD | TBD | TBD |
+| `tf_efficientnet_l2_ns_475` | 61.8 | 53.6 | TBD | TBD | TBD |
 
 ## Replication
 The results reported on this page can be reproduced as follows:
