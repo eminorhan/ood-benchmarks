@@ -40,7 +40,7 @@ Other versions may or may not work. In addition, you will need to download the d
 | `tf_efficientnet_l2_ns`     | TBD | TBD | TBD | TBD | 39.0 | 52.7 | TBD |
 | `tf_efficientnet_l2_ns_475` | TBD | TBD | TBD | TBD | 61.8 | 53.6 | TBD |
 | `tf_efficientnet_b7_ns`     | TBD | TBD | TBD | TBD | 44.1 | 48.3 | TBD |
-| `tf_efficientnet_b6_ns`     | TBD | TBD | TBD | TBD | 35.1 | TBD  | TBD |
+| `tf_efficientnet_b6_ns`     | TBD | TBD | TBD | TBD | 35.1 | 48.1 | TBD |
 | `tf_efficientnet_b5_ns`     | TBD | TBD | TBD | TBD | 32.3 | TBD  | TBD |
 | `tf_efficientnet_b4_ns`     | TBD | TBD | TBD | TBD | 29.5 | TBD  | TBD |
 | `tf_efficientnet_b3_ns`     | TBD | TBD | TBD | TBD | 26.2 | TBD  | TBD |
