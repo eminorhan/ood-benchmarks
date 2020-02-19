@@ -74,6 +74,8 @@ Other versions may or may not work. In addition, you will need to download the d
 | `tf_efficientnet_b1`     | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
 | `tf_efficientnet_b0`     | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
 
+In my experience, one may get slightly different numbers from those reported above (up to ~1\%) using different pre-processing strategies, but the overall patterns should be robust to these changes.
+
 ## Replication
 For replication, please see the shell scripts in [`scripts`](https://github.com/eminorhan/ood-benchmarks/tree/master/scripts) that were used to obtain the results reported on this page. 
 
