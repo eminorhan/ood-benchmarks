@@ -53,7 +53,7 @@ Other versions may or may not work. In addition, you will need to download the d
 | `resnext101_32x32d_wsl`     | TBD | TBD | TBD | TBD | 40.6 | 58.6 | TBD |
 | `resnext101_32x16d_wsl`     | TBD | TBD | TBD | TBD | 42.7 | 57.9 | TBD |
 | `resnext101_32x8d_wsl`      | TBD | TBD | TBD | TBD | 39.1 | 55.2 | TBD |
-| `resnext101_32x8d`          | TBD | TBD | TBD | TBD | 25.9 | TBD  | TBD |
+| `resnext101_32x8d`          | TBD | TBD | TBD | TBD | 25.9 | 28.6 | TBD |
 | `tf_efficientnet_l2_ns`     | TBD | TBD | TBD | TBD | 39.0 | 52.7 | TBD |
 | `tf_efficientnet_l2_ns_475` | TBD | TBD | TBD | TBD | **61.8** | 53.6 | TBD |
 | `tf_efficientnet_b7_ns`     | TBD | TBD | TBD | TBD | 44.1 | 48.3 | TBD |
