@@ -44,16 +44,16 @@ The code was written and tested with:
 * torchvision == 0.4.0
 * foolbox == 1.8.0
 
-Other versions may or may not work. In addition, you will need to download the datasets listed above in order to replicate the results.
+Other versions may or may not work. In addition, you will need to download the datasets listed above in order to replicate the results. Please let me know if you encounter any issues.
 
 ## Results
 | Model | IN | IN-A | IN-C | IN-P | Stylized IN | IN-Sketch | Adv. acc. |
 | ----- |:--:|:----:|:----:|:----:|:-----------:|:---------:|:---------:|
 | `resnext101_32x48d_wsl`     | TBD | TBD | TBD | TBD | 42.8 | 59.1 | TBD |
-| `resnext101_32x32d_wsl`     | TBD | TBD | TBD | TBD | TBD  | TBD  | TBD |
-| `resnext101_32x16d_wsl`     | TBD | TBD | TBD | TBD | TBD  | TBD  | TBD |
-| `resnext101_32x8d_wsl`      | TBD | TBD | TBD | TBD | TBD  | TBD  | TBD |
-| `resnext101_32x8d`          | TBD | TBD | TBD | TBD | TBD  | TBD  | TBD |
+| `resnext101_32x32d_wsl`     | TBD | TBD | TBD | TBD | 40.6 | 58.6 | TBD |
+| `resnext101_32x16d_wsl`     | TBD | TBD | TBD | TBD | 42.7 | 57.9 | TBD |
+| `resnext101_32x8d_wsl`      | TBD | TBD | TBD | TBD | 39.1 | 55.2 | TBD |
+| `resnext101_32x8d`          | TBD | TBD | TBD | TBD | 25.9 | TBD  | TBD |
 | `tf_efficientnet_l2_ns`     | TBD | TBD | TBD | TBD | 39.0 | 52.7 | TBD |
 | `tf_efficientnet_l2_ns_475` | TBD | TBD | TBD | TBD | 61.8 | 53.6 | TBD |
 | `tf_efficientnet_b7_ns`     | TBD | TBD | TBD | TBD | 44.1 | 48.3 | TBD |
@@ -61,9 +61,9 @@ Other versions may or may not work. In addition, you will need to download the d
 | `tf_efficientnet_b5_ns`     | TBD | TBD | TBD | TBD | 32.3 | 45.1 | TBD |
 | `tf_efficientnet_b4_ns`     | TBD | TBD | TBD | TBD | 29.5 | 43.2 | TBD |
 | `tf_efficientnet_b3_ns`     | TBD | TBD | TBD | TBD | 26.2 | 39.4 | TBD |
-| `tf_efficientnet_b2_ns`     | TBD | TBD | TBD | TBD | 25.4 | TBD  | TBD |
-| `tf_efficientnet_b1_ns`     | TBD | TBD | TBD | TBD | 27.7 | TBD  | TBD |
-| `tf_efficientnet_b0_ns`     | TBD | TBD | TBD | TBD | 24.3 | TBD  | TBD |
+| `tf_efficientnet_b2_ns`     | TBD | TBD | TBD | TBD | 25.4 | 36.1 | TBD |
+| `tf_efficientnet_b1_ns`     | TBD | TBD | TBD | TBD | 27.7 | 34.0 | TBD |
+| `tf_efficientnet_b0_ns`     | TBD | TBD | TBD | TBD | 24.3 | 28.9 | TBD |
 | `tf_efficientnet_b8`     | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
 | `tf_efficientnet_b7`     | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
 | `tf_efficientnet_b6`     | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
