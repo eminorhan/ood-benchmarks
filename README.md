@@ -1,9 +1,9 @@
 # Out-of-distribution generalization benchmarks for image recognition models
 This repository contains code for evaluating the out-of-distribution generalization performance of various image recognition models. Currently, performance on the following benchmarks are evaluated:
 
+* [ImageNet-A](https://github.com/hendrycks/natural-adv-examples)
 * [ImageNet-C](https://github.com/hendrycks/robustness)
 * [ImageNet-P](https://github.com/hendrycks/robustness)
-* [ImageNet-A](https://github.com/hendrycks/natural-adv-examples)
 * [ImageNet-Sketch](https://github.com/HaohanWang/ImageNet-Sketch)
 * [Stylized ImageNet](https://github.com/rgeirhos/texture-vs-shape/tree/master/stimuli/style-transfer-preprocessed-512)
 * Adversarial robustness
@@ -64,20 +64,20 @@ Other versions may or may not work. In addition, you will need to download the d
 | `tf_efficientnet_b2_ns`     | TBD | TBD | TBD | TBD | 25.4 | 36.1 | TBD |
 | `tf_efficientnet_b1_ns`     | TBD | TBD | TBD | TBD | 27.7 | 34.0 | TBD |
 | `tf_efficientnet_b0_ns`     | TBD | TBD | TBD | TBD | 24.3 | 28.9 | TBD |
-| `tf_efficientnet_b8`     | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
-| `tf_efficientnet_b7`     | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
-| `tf_efficientnet_b6`     | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
-| `tf_efficientnet_b5`     | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
-| `tf_efficientnet_b4`     | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
-| `tf_efficientnet_b3`     | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
-| `tf_efficientnet_b2`     | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
-| `tf_efficientnet_b1`     | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
-| `tf_efficientnet_b0`     | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
+| `tf_efficientnet_b8`     | TBD | TBD | TBD | TBD | 31.3 | 40.3 | TBD |
+| `tf_efficientnet_b7`     | TBD | TBD | TBD | TBD | 31.7 | 38.7 | TBD |
+| `tf_efficientnet_b6`     | TBD | TBD | TBD | TBD | 18.6 | 32.4 | TBD |
+| `tf_efficientnet_b5`     | TBD | TBD | TBD | TBD | 26.9 | 36.4 | TBD |
+| `tf_efficientnet_b4`     | TBD | TBD | TBD | TBD | 22.8 | 32.7 | TBD |
+| `tf_efficientnet_b3`     | TBD | TBD | TBD | TBD | 22.5 | 31.8 | TBD |
+| `tf_efficientnet_b2`     | TBD | TBD | TBD | TBD | 29.0 | 29.3 | TBD |
+| `tf_efficientnet_b1`     | TBD | TBD | TBD | TBD | 25.2 | 28.2 | TBD |
+| `tf_efficientnet_b0`     | TBD | TBD | TBD | TBD | 26.3 | 26.5 | TBD |
 
-In my experience, one may get slightly different numbers from those reported above (up to ~1\%) using different pre-processing strategies, but the overall patterns should be robust to these changes.
+In my experience, it is possible to get slightly different numbers from those reported above (up to ~1\%) using different pre-processing strategies, but the overall patterns should be robust to these changes.
 
 ## Replication
 For replication, please see the shell scripts in [`scripts`](https://github.com/eminorhan/ood-benchmarks/tree/master/scripts) that were used to obtain the results reported on this page. 
 
 ## Acknowledgments
-The code here utilizes code and stimuli from the [texture-vs-shape](https://github.com/rgeirhos/texture-vs-shape) repository by Robert Geirhos, the [robustness](https://github.com/hendrycks/robustness) and [natural adversarial examples](https://github.com/hendrycks/natural-adv-examples) repositories by Dan Hendrycks, and the [ImageNet example](https://github.com/pytorch/examples/tree/master/imagenet) from PyTorch. We are grateful to the authors of [Mahajan et al. (2018)](https://arxiv.org/abs/1805.00932) and [Xie et al. (2019)](https://arxiv.org/abs/1911.04252) for making their pre-trained models publicly available. We are also grateful to Ross Wightman for porting Google's EfficientNet models to PyTorch (see his repo [here](https://github.com/rwightman/gen-efficientnet-pytorch)), which were used in the experiments reported here.
+The code here utilizes code and stimuli from the [texture-vs-shape](https://github.com/rgeirhos/texture-vs-shape) repository by Robert Geirhos, the [robustness](https://github.com/hendrycks/robustness) and [natural adversarial examples](https://github.com/hendrycks/natural-adv-examples) repositories by Dan Hendrycks, and the [ImageNet example](https://github.com/pytorch/examples/tree/master/imagenet) from PyTorch. I am grateful to the authors of [Mahajan et al. (2018)](https://arxiv.org/abs/1805.00932) and [Xie et al. (2019)](https://arxiv.org/abs/1911.04252) for making their pre-trained models publicly available. I am also grateful to Ross Wightman for porting Google's EfficientNet models to PyTorch (see his repo [here](https://github.com/rwightman/gen-efficientnet-pytorch)), which were used in the experiments reported here.

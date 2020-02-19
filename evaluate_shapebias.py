@@ -15,7 +15,10 @@ parser.add_argument('--model-name', type=str, default='resnext101_32x16d_wsl',
                              'resnext101_32x32d_wsl', 'resnext101_32x48d_wsl', 'tf_efficientnet_l2_ns',
                              'tf_efficientnet_l2_ns_475', 'tf_efficientnet_b7_ns', 'tf_efficientnet_b6_ns',
                              'tf_efficientnet_b5_ns', 'tf_efficientnet_b4_ns', 'tf_efficientnet_b3_ns',
-                             'tf_efficientnet_b2_ns', 'tf_efficientnet_b1_ns', 'tf_efficientnet_b0_ns'],
+                             'tf_efficientnet_b2_ns', 'tf_efficientnet_b1_ns', 'tf_efficientnet_b0_ns',
+                             'tf_efficientnet_b8', 'tf_efficientnet_b7', 'tf_efficientnet_b6', 'tf_efficientnet_b5',
+                             'tf_efficientnet_b4', 'tf_efficientnet_b3', 'tf_efficientnet_b2', 'tf_efficientnet_b1',
+                             'tf_efficientnet_b0'],
                     help='evaluated model')
 parser.add_argument('--workers', default=4, type=int, help='no of data loading workers')
 parser.add_argument('--batch-size', default=36, type=int, help='mini-batch size')

@@ -29,10 +29,19 @@ source /home/eo41/venv/bin/activate
 #python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'tf_efficientnet_b2_ns' --im-size 260
 #python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'tf_efficientnet_b1_ns' --im-size 240
 #python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'tf_efficientnet_b0_ns' --im-size 224
+python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'tf_efficientnet_b8' --im-size 672
+python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'tf_efficientnet_b7' --im-size 600
+python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'tf_efficientnet_b6' --im-size 528
+python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'tf_efficientnet_b5' --im-size 456
+python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'tf_efficientnet_b4' --im-size 380
+python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'tf_efficientnet_b3' --im-size 300
+python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'tf_efficientnet_b2' --im-size 260
+python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'tf_efficientnet_b1' --im-size 240
+python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'tf_efficientnet_b0' --im-size 224
 #python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'resnext101_32x48d_wsl'
-python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'resnext101_32x32d_wsl'
-python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'resnext101_32x16d_wsl'
-python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'resnext101_32x8d_wsl'
-python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'resnext101_32x8d'
+#python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'resnext101_32x32d_wsl'
+#python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'resnext101_32x16d_wsl'
+#python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'resnext101_32x8d_wsl'
+#python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_shapebias.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/shape_bias/' --model-name 'resnext101_32x8d'
 
 echo "Done"
