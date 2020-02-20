@@ -10,20 +10,29 @@ from foolbox.models import PyTorchModel
 from foolbox.attacks import RandomStartProjectedGradientDescentAttack
 from foolbox.criteria import TargetClass
 from foolbox.distances import Linfinity
-from utils import load_model
+from utils import load_model, ShortEdgeCenterCrop, AverageMeter, ProgressMeter
+from PIL import Image
 
 
 parser = argparse.ArgumentParser(description='Run white-box attacks against models')
 parser.add_argument('data', metavar='DIR', help='path to dataset')
 parser.add_argument('--model-name', type=str, default='resnext101_32x16d_wsl',
                     choices=['resnext101_32x8d', 'resnext101_32x8d_wsl', 'resnext101_32x16d_wsl',
-                             'resnext101_32x32d_wsl', 'resnext101_32x48d_wsl'], help='evaluated model')
+                             'resnext101_32x32d_wsl', 'resnext101_32x48d_wsl', 'tf_efficientnet_l2_ns',
+                             'tf_efficientnet_l2_ns_475', 'tf_efficientnet_b7_ns', 'tf_efficientnet_b6_ns',
+                             'tf_efficientnet_b5_ns', 'tf_efficientnet_b4_ns', 'tf_efficientnet_b3_ns',
+                             'tf_efficientnet_b2_ns', 'tf_efficientnet_b1_ns', 'tf_efficientnet_b0_ns',
+                             'tf_efficientnet_b8', 'tf_efficientnet_b7', 'tf_efficientnet_b6', 'tf_efficientnet_b5',
+                             'tf_efficientnet_b4', 'tf_efficientnet_b3', 'tf_efficientnet_b2', 'tf_efficientnet_b1',
+                             'tf_efficientnet_b0'],
+                    help='evaluated model')
 parser.add_argument('--workers', default=4, type=int, help='no of data loading workers')
 parser.add_argument('--batch-size', default=2, type=int, help='mini-batch size')
 parser.add_argument('--gpu', default=0, type=int, help='GPU id to use.')
 parser.add_argument('--print-freq', default=250, type=int, help='print frequency')
 parser.add_argument('--epsilon', default=0.06, type=float, help='perturbation size')
 parser.add_argument('--pgd-steps', default=10, type=int, help='number of PGD steps')
+parser.add_argument('--im-size', default=224, type=int, help='image size')
 
 
 def validate(val_loader, model, epsilon, args):
@@ -98,8 +107,8 @@ if __name__ == "__main__":
 
     val_loader = torch.utils.data.DataLoader(
         datasets.ImageFolder(valdir, transforms.Compose([
-            transforms.Resize(256),
-            transforms.CenterCrop(224),
+            ShortEdgeCenterCrop(),
+            transforms.Resize(args.im_size, interpolation=Image.BICUBIC),
             transforms.ToTensor(),
         ])),
         batch_size=args.batch_size, shuffle=False,
