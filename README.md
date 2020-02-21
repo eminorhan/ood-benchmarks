@@ -1,11 +1,10 @@
 # Table of Contents
-
-1. [Out-of-distribution generalization benchmarks for image recognition models](#Out-of-distribution generalization benchmarks for image recognition models)
-2. [Results](#Results)
-3. [Discussion](#Discussion)
-4. [Replication](#Replication)
-5. [Requirements](#Requirements)
-6. [Acknowledgments](#Acknowledgments)
+[Out-of-distribution generalization benchmarks for image recognition models](#Out-of-distribution-generalization-benchmarks-for-image-recognition-models)
+[Results](#Results)
+[Discussion](#Discussion)
+[Replication](#Replication)
+[Requirements](#Requirements)
+[Acknowledgments](#Acknowledgments)
 
 ## Out-of-distribution generalization benchmarks for image recognition models
 This repository contains code for evaluating the out-of-distribution generalization performance of various image recognition models. Currently, performance on the following benchmarks are evaluated:
