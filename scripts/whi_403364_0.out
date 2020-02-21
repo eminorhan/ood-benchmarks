@@ -1,0 +1,16 @@
+Using cache found in /misc/vlgscratch4/LakeGroup/emin/robust_vision/pretrained_models/rwightman_gen-efficientnet-pytorch_master
+Loaded model: tf_efficientnet_l2_ns_475
+Running white-box attacks with epsilon: 0.06 Number of PGD steps: 10
+/home/eo41/venv/lib/python3.6/site-packages/foolbox/attacks/base.py:148: UserWarning: RandomStartProjectedGradientDescentAttack did not find an adversarial, maybe the model or the criterion is not supported by this attack.
+  ' attack.'.format(self.name()))
+Iter, Clean, Clean_pred, Adv, Adv_pred:  0 0 0.0 0 0.0
+Test: [    0/25000]	Time  7.316 ( 7.316)	Acc@1 100.00 (100.00)
+Iter, Clean, Clean_pred, Adv, Adv_pred:  1 0 0.0 392 392.0
+Iter, Clean, Clean_pred, Adv, Adv_pred:  2 0 0.0 556 556.0
+Iter, Clean, Clean_pred, Adv, Adv_pred:  3 0 0.0 107 107.0
+Iter, Clean, Clean_pred, Adv, Adv_pred:  4 0 0.0 418 418.0
+Iter, Clean, Clean_pred, Adv, Adv_pred:  5 0 133.0 39 39.0
+Iter, Clean, Clean_pred, Adv, Adv_pred:  6 0 0.0 12 12.0
+Iter, Clean, Clean_pred, Adv, Adv_pred:  7 0 0.0 376 376.0
+Iter, Clean, Clean_pred, Adv, Adv_pred:  8 0 0.0 137 137.0
+Iter, Clean, Clean_pred, Adv, Adv_pred:  9 0 0.0 604 604.0
