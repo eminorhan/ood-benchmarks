@@ -15,6 +15,7 @@ module purge
 module load cuda-10.0
 source /home/eo41/venv/bin/activate
 
+
 #python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_l2_ns' --im-size 800
 #python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_l2_ns_475' --im-size 475
 #python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b7_ns' --im-size 600
@@ -39,5 +40,6 @@ python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py 
 #python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'resnext101_32x16d_wsl'
 #python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'resnext101_32x8d_wsl'
 #python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'resnext101_32x8d'
+
 
 echo "Done"

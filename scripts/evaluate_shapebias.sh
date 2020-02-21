@@ -11,9 +11,6 @@
 #SBATCH --job-name=shapebias
 #SBATCH --output=shapebias_%A_%a.out
 
-index=$SLURM_ARRAY_TASK_ID
-job=$SLURM_JOBID
-
 module purge
 
 module load cuda-10.0

@@ -35,7 +35,50 @@ The following models are currently evaluated:
 * `tf_efficientnet_b1`: RandAugment trained model with B1 backbone (res: 240)
 * `tf_efficientnet_b0`: RandAugment trained model with B0 backbone (res: 224)
 
-All simulation results reported on this page can be found in the [`results`](https://github.com/eminorhan/ood-benchmarks/tree/master/results) folder. 
+All simulation results reported on this page can be found in the [`results`](https://github.com/eminorhan/ood-benchmarks/tree/master/results) folder.
+
+## Results
+| Model | IN | IN-A | IN-C | IN-P | Stylized IN | IN-Sketch | Adv. acc. |
+| ----- |:--:|:----:|:----:|:----:|:-----------:|:---------:|:---------:|
+| `resnext101_32x48d_wsl`     | TBD | 61.0 | TBD | TBD | 42.8 | **59.1** | 29.7 |
+| `resnext101_32x32d_wsl`     | TBD | 58.1 | TBD | TBD | 40.6 | 58.6 | 30.6 |
+| `resnext101_32x16d_wsl`     | TBD | 53.1 | TBD | TBD | 42.7 | 57.9 | **40.7** |
+| `resnext101_32x8d_wsl`      | TBD | 45.4 | TBD | TBD | 39.1 | 55.2 | 34.4 |
+| `resnext101_32x8d`          | TBD | 10.2 | TBD | TBD | 25.9 | 28.6 | 0.0 |
+| `tf_efficientnet_l2_ns`     | TBD | **84.9** | TBD | TBD | 39.0 | 52.7 | TBD |
+| `tf_efficientnet_l2_ns_475` | TBD | 83.4 | TBD | TBD | **61.8** | 53.6 | TBD |
+| `tf_efficientnet_b7_ns`     | TBD | 66.5 | TBD | TBD | 44.1 | 48.3 | 2.9 |
+| `tf_efficientnet_b6_ns`     | TBD | 61.5 | TBD | TBD | 35.1 | 48.1 | 5.1 |
+| `tf_efficientnet_b5_ns`     | TBD | 58.9 | TBD | TBD | 32.3 | 45.1 | 3.7 |
+| `tf_efficientnet_b4_ns`     | TBD | 48.9 | TBD | TBD | 29.5 | 43.2 | 9.0 |
+| `tf_efficientnet_b3_ns`     | TBD | 32.7 | TBD | TBD | 26.2 | 39.4 | 6.8 |
+| `tf_efficientnet_b2_ns`     | TBD | 20.9 | TBD | TBD | 25.4 | 36.1 | 5.6 |
+| `tf_efficientnet_b1_ns`     | TBD | 17.0 | TBD | TBD | 27.7 | 34.0 | 5.4 |
+| `tf_efficientnet_b0_ns`     | TBD | 10.3 | TBD | TBD | 24.3 | 28.9 | 2.7 |
+| `tf_efficientnet_b8`     | TBD | 48.0 | TBD | TBD | 31.3 | 40.3 | 0.5 |
+| `tf_efficientnet_b7`     | TBD | 42.5 | TBD | TBD | 31.7 | 38.7 | TBD |
+| `tf_efficientnet_b6`     | TBD | 34.2 | TBD | TBD | 18.6 | 32.4 | 0.3 |
+| `tf_efficientnet_b5`     | TBD | 30.5 | TBD | TBD | 26.9 | 36.4 | 0.9 |
+| `tf_efficientnet_b4`     | TBD | 24.7 | TBD | TBD | 22.8 | 32.7 | 0.5 |
+| `tf_efficientnet_b3`     | TBD | 15.1 | TBD | TBD | 22.5 | 31.8 | 0.6 |
+| `tf_efficientnet_b2`     | TBD | 8.7 | TBD | TBD | 29.0 | 29.3 | 0.5 |
+| `tf_efficientnet_b1`     | TBD | 7.2 | TBD | TBD | 25.2 | 28.2 | 0.5 |
+| `tf_efficientnet_b0`     | TBD | 4.8 | TBD | TBD | 26.3 | 26.5 | 0.3 |
+
+**Notes:** 
+
+1. In my experience, it is possible to get slightly different numbers from those reported above (up to ~1\%) using different pre-processing strategies, but the overall patterns should be robust to these changes. 
+
+2. Adversarial accuracy refers to top-1 accuracy against white-box PGD attacks with a normalized perturbation size of 0.06 in the *l*<sub>inf</sub> metric (see [my paper](https://arxiv.org/abs/1907.07640) for more details). 
+
+3. Unfortunately, I didn't have enough GPU RAM to run white-box atttacks against the largest noisy student models, `tf_efficientnet_l2_ns` and `tf_efficientnet_l2_ns_475`, but I don't expect the results to be much different from the smaller noisy student models. 
+
+4. Note that the noisy student and WSL models are not directly comparable with respect to adversarial accuracy, since the noisy student models use larger images and it is significantly easier to run successful adversarial attacks with larger images.
+
+## Discussion
+
+## Replication
+For replication, please see the shell scripts in [`scripts`](https://github.com/eminorhan/ood-benchmarks/tree/master/scripts) that were used to obtain the results reported on this page. 
 
 ## Requirements
 The code was written and tested with:
@@ -45,39 +88,6 @@ The code was written and tested with:
 * foolbox == 1.8.0
 
 Other versions may or may not work. In addition, you will need to download the datasets listed above in order to replicate the results. Please let me know if you encounter any issues.
-
-## Results
-| Model | IN | IN-A | IN-C | IN-P | Stylized IN | IN-Sketch | Adv. acc. |
-| ----- |:--:|:----:|:----:|:----:|:-----------:|:---------:|:---------:|
-| `resnext101_32x48d_wsl`     | TBD | TBD | TBD | TBD | 42.8 | **59.1** | 29.7 |
-| `resnext101_32x32d_wsl`     | TBD | TBD | TBD | TBD | 40.6 | 58.6 | 30.6 |
-| `resnext101_32x16d_wsl`     | TBD | TBD | TBD | TBD | 42.7 | 57.9 | **40.7** |
-| `resnext101_32x8d_wsl`      | TBD | TBD | TBD | TBD | 39.1 | 55.2 | 34.4 |
-| `resnext101_32x8d`          | TBD | TBD | TBD | TBD | 25.9 | 28.6 | 0.0 |
-| `tf_efficientnet_l2_ns`     | TBD | TBD | TBD | TBD | 39.0 | 52.7 | TBD |
-| `tf_efficientnet_l2_ns_475` | TBD | TBD | TBD | TBD | **61.8** | 53.6 | TBD |
-| `tf_efficientnet_b7_ns`     | TBD | TBD | TBD | TBD | 44.1 | 48.3 | 2.9 |
-| `tf_efficientnet_b6_ns`     | TBD | TBD | TBD | TBD | 35.1 | 48.1 | 5.1 |
-| `tf_efficientnet_b5_ns`     | TBD | TBD | TBD | TBD | 32.3 | 45.1 | 3.7 |
-| `tf_efficientnet_b4_ns`     | TBD | TBD | TBD | TBD | 29.5 | 43.2 | 9.0 |
-| `tf_efficientnet_b3_ns`     | TBD | TBD | TBD | TBD | 26.2 | 39.4 | 6.8 |
-| `tf_efficientnet_b2_ns`     | TBD | TBD | TBD | TBD | 25.4 | 36.1 | 5.6 |
-| `tf_efficientnet_b1_ns`     | TBD | TBD | TBD | TBD | 27.7 | 34.0 | 5.4 |
-| `tf_efficientnet_b0_ns`     | TBD | TBD | TBD | TBD | 24.3 | 28.9 | 2.7 |
-| `tf_efficientnet_b8`     | TBD | TBD | TBD | TBD | 31.3 | 40.3 | TBD |
-| `tf_efficientnet_b7`     | TBD | TBD | TBD | TBD | 31.7 | 38.7 | TBD |
-| `tf_efficientnet_b6`     | TBD | TBD | TBD | TBD | 18.6 | 32.4 | TBD |
-| `tf_efficientnet_b5`     | TBD | TBD | TBD | TBD | 26.9 | 36.4 | TBD |
-| `tf_efficientnet_b4`     | TBD | TBD | TBD | TBD | 22.8 | 32.7 | TBD |
-| `tf_efficientnet_b3`     | TBD | TBD | TBD | TBD | 22.5 | 31.8 | TBD |
-| `tf_efficientnet_b2`     | TBD | TBD | TBD | TBD | 29.0 | 29.3 | TBD |
-| `tf_efficientnet_b1`     | TBD | TBD | TBD | TBD | 25.2 | 28.2 | TBD |
-| `tf_efficientnet_b0`     | TBD | TBD | TBD | TBD | 26.3 | 26.5 | TBD |
-
-In my experience, it is possible to get slightly different numbers from those reported above (up to ~1\%) using different pre-processing strategies, but the overall patterns should be robust to these changes. Adversarial accuracy refers to top-1 accuracy against white-box PGD attacks with a normalized perturbation size of 0.06 in the *l*<sub>inf</sub> metric (see [my paper](https://arxiv.org/abs/1907.07640) for more details). Unfortunately, I didn't have enough GPU RAM to run atttacks against the largest noisy student models, `tf_efficientnet_l2_ns` and `tf_efficientnet_l2_ns_475`, but I don't expect the results to be much different from the smaller noisy student models.
-
-## Replication
-For replication, please see the shell scripts in [`scripts`](https://github.com/eminorhan/ood-benchmarks/tree/master/scripts) that were used to obtain the results reported on this page. 
 
 ## Acknowledgments
 The code here utilizes code and stimuli from the [texture-vs-shape](https://github.com/rgeirhos/texture-vs-shape) repository by Robert Geirhos, the [robustness](https://github.com/hendrycks/robustness) and [natural adversarial examples](https://github.com/hendrycks/natural-adv-examples) repositories by Dan Hendrycks, and the [ImageNet example](https://github.com/pytorch/examples/tree/master/imagenet) from PyTorch. I am grateful to the authors of [Mahajan et al. (2018)](https://arxiv.org/abs/1805.00932) and [Xie et al. (2019)](https://arxiv.org/abs/1911.04252) for making their pre-trained models publicly available. I am also grateful to Ross Wightman for porting Google's EfficientNet models to PyTorch (see his repo [here](https://github.com/rwightman/gen-efficientnet-pytorch)), which were used in the experiments reported here.
