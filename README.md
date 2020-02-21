@@ -1,9 +1,14 @@
 # Table of Contents
 [Out-of-distribution generalization benchmarks for image recognition models](#Out-of-distribution-generalization-benchmarks-for-image-recognition-models)
+
 [Results](#Results)
+
 [Discussion](#Discussion)
+
 [Replication](#Replication)
+
 [Requirements](#Requirements)
+
 [Acknowledgments](#Acknowledgments)
 
 ## Out-of-distribution generalization benchmarks for image recognition models
