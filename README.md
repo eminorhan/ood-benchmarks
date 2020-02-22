@@ -75,7 +75,7 @@ All simulation results reported on this page can be found in the [`results`](htt
 
 4. Note that the noisy student and WSL models are not directly comparable with respect to adversarial accuracy, since the noisy student models use larger images and it is significantly easier to run successful adversarial attacks with larger images.
 
-5. However, I was able to run adversarial attacks against the `tf_efficientnet_l2_ns_475` model using images of size 224x224. Although this is not ideal (because the model was trained with images of a different size), this allows us to make a rough comparison between the WSL models and the noisy student models with respect to adversarial robustness. The `tf_efficientnet_l2_ns_475` model had an adversarial accuracy of ~21\% in this setting, demonstrating that the observed improvement in adversarial accuracy that comes with training with extra data is very much real and is not specific to the WSL models.
+5. However, I was able to run adversarial attacks against the `tf_efficientnet_l2_ns_475` model using images of size 224x224. Although this is not ideal (because the model was trained with images of a different size), this allows us to make a rough comparison between the WSL models and the noisy student models with respect to adversarial robustness. The `tf_efficientnet_l2_ns_475` model had an adversarial accuracy of 22.3\% in this setting, demonstrating that the observed improvement in adversarial accuracy that comes with training with extra data is very much real and is not specific to the WSL models.
 
 ## Discussion
 1. More training data improves robustness across the board (including adversarial robustness).
