@@ -109,7 +109,7 @@ if __name__ == "__main__":
 
     # evaluate on validation set
     preds = validate(model, preprocessing, args)
-    labels = np.load('cueconflict_labels.npz')
+    labels = np.load('../cueconflict_labels.npz')
     frac_correct, frac_shape, frac_texture = accuracies(labels, preds)
 
     print('Correct:', frac_correct, 'Shape:', frac_shape, 'Texture:', frac_texture)
