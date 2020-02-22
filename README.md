@@ -71,11 +71,20 @@ All simulation results reported on this page can be found in the [`results`](htt
 
 2. Adversarial accuracy refers to top-1 accuracy against white-box PGD attacks with a normalized perturbation size of 0.06 in the *l*<sub>inf</sub> metric (see [my paper](https://arxiv.org/abs/1907.07640) for more details). 
 
-3. Unfortunately, I didn't have enough GPU RAM to run white-box atttacks against the largest noisy student models, `tf_efficientnet_l2_ns` and `tf_efficientnet_l2_ns_475`, but I don't expect the results to be much different from the smaller noisy student models. 
+3. Unfortunately, I didn't have enough GPU RAM to run white-box atttacks against the largest noisy student models, `tf_efficientnet_l2_ns` and `tf_efficientnet_l2_ns_475`, using their native image resolution, but I don't expect the results to be much different from the smaller noisy student models. 
 
 4. Note that the noisy student and WSL models are not directly comparable with respect to adversarial accuracy, since the noisy student models use larger images and it is significantly easier to run successful adversarial attacks with larger images.
 
+5. However, I was able to run adversarial attacks against the `tf_efficientnet_l2_ns_475` model using images of size 224x224. Although this is not ideal (because the model was trained with images of a different size), this allows us to make a rough comparison between the WSL models and the noisy student models with respect to adversarial robustness. The `tf_efficientnet_l2_ns_475` model had an adversarial accuracy of ~21\% in this setting, demonstrating that the observed improvement in adversarial accuracy that comes with training with extra data is very much real and is not specific to the WSL models.
+
 ## Discussion
+1. More training data improves robustness across the board (including adversarial robustness).
+
+2. Large capacity models are crucial for bringing out the benefits of extra training data.
+
+3. On the ImageNet-Sketch benchmark, WSL models perform slightly better than the noisy student models. I suspect that this may be because the Instagram data that WSL models were trained with might already contain such sketch-like images. This raises an important concern with both of these models. The large scale datasets these models were trained with (Instagram 1B and JFT 300M) are private, so we don't exactly know what kind of images they contain. Therefore, we also don't know to what extent these "out-of-distribution" benchmarks are really out of distribution for these models. 
+
+4. On the stylized ImageNet benchmark, the `tf_efficientnet_l2_ns_475` model achieves a respectable shape-based prediction rate of 61.8\%. Although this is still far from the shape-based prediction rate for humans (>90\%), it suggests to me that we might be able to overcome the strong texture bias of image recognition models by pushing the noisy student approach to even larger datasets.
 
 ## Replication
 For replication, please see the shell scripts in [`scripts`](https://github.com/eminorhan/ood-benchmarks/tree/master/scripts) that were used to obtain the results reported on this page. 
