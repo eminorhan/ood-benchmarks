@@ -82,7 +82,7 @@ All simulation results reported on this page can be found in the [`results`](htt
 
 2. Large capacity models are crucial for bringing out the benefits of extra training data.
 
-3. On the ImageNet-Sketch benchmark, WSL models perform slightly better than the noisy student models. I suspect that this may be because the Instagram data that WSL models were trained with might already contain such sketch-like images. This raises an important concern with both of these models. The large scale datasets these models were trained with (Instagram-1B and JFT-300M) are private, so we don't exactly know what kind of images they contain. Therefore, we also don't know to what extent these "out-of-distribution" benchmarks are really out of distribution for these models. 
+3. On the ImageNet-Sketch benchmark, WSL models perform slightly better than the noisy student models. I suspect that this may be because the Instagram data that WSL models were trained with might already contain such sketch-like images. This raises an important concern with both of these models. The large scale datasets these models were trained with (Instagram-1B and JFT-300M) are both private, so we don't exactly know what kind of images they contain. This means that we also don't exactly know to what extent these "out-of-distribution" benchmarks are really out of distribution for these models. 
 
 4. On the stylized ImageNet benchmark, the `tf_efficientnet_l2_ns_475` model achieves a respectable shape-based prediction rate of 61.8\%. Although this is still far from the shape-based prediction rate for humans (>90\%), it suggests to me that we might be able to overcome the strong texture bias of image recognition models by pushing the noisy student approach to even larger datasets.
 
