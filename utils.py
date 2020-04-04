@@ -118,12 +118,21 @@ def load_model(model_name):
             model = torchvision.models.resnext101_32x8d(pretrained=True)
         else:
             model = torch.hub.load('facebookresearch/WSL-Images', model_name)
+        model = torch.nn.DataParallel(model).cuda()
     elif model_name.startswith('tf_efficientnet'):
         model = torch.hub.load('rwightman/gen-efficientnet-pytorch', model_name, pretrained=True)
+        model = torch.nn.DataParallel(model).cuda()
+    elif model_name == 'moco_v2':
+        model = torchvision.models.resnet50(pretrained=False)
+        model = torch.nn.DataParallel(model).cuda()
+        checkpoint = torch.load(os.path.join(torch_hub_dir, 'moco_v2.pth.tar'))
+        model.load_state_dict(checkpoint['state_dict'])
+    elif model_name == 'resnet50':
+        model = torchvision.models.resnet50(pretrained=True)
+        model = torch.nn.DataParallel(model).cuda()
     else:
         raise ValueError('Model not available.')
 
-    model = torch.nn.DataParallel(model).cuda()
     print('Loaded model:', model_name)
 
     return model

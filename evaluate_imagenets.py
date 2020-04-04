@@ -19,7 +19,7 @@ parser.add_argument('--model-name', type=str, default='resnext101_32x16d_wsl',
                              'tf_efficientnet_b2_ns', 'tf_efficientnet_b1_ns', 'tf_efficientnet_b0_ns',
                              'tf_efficientnet_b8', 'tf_efficientnet_b7', 'tf_efficientnet_b6', 'tf_efficientnet_b5',
                              'tf_efficientnet_b4', 'tf_efficientnet_b3', 'tf_efficientnet_b2', 'tf_efficientnet_b1',
-                             'tf_efficientnet_b0'],
+                             'tf_efficientnet_b0', 'moco_v2', 'resnet50'],
                     help='evaluated model')
 parser.add_argument('--workers', default=4, type=int, help='no of data loading workers')
 parser.add_argument('--batch-size', default=36, type=int, help='mini-batch size')
@@ -35,14 +35,7 @@ if __name__ == "__main__":
     valdir = os.path.join(args.data, 'val')
     normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 
-    if args.model_name.startswith('resnext'):
-        combined_transform = transforms.Compose([
-                transforms.Resize(256, interpolation=Image.BICUBIC),
-                transforms.CenterCrop(224),
-                transforms.ToTensor(),
-                normalize
-        ])
-    elif args.model_name.startswith('tf_efficientnet'):
+    if args.model_name.startswith('tf_efficientnet'):
         combined_transform = transforms.Compose([
             transforms.Resize(256, interpolation=Image.BICUBIC),
             transforms.CenterCrop(224),
@@ -51,7 +44,12 @@ if __name__ == "__main__":
             normalize
         ])
     else:
-        raise ValueError('Model not available.')
+        combined_transform = transforms.Compose([
+            transforms.Resize(256, interpolation=Image.BICUBIC),
+            transforms.CenterCrop(224),
+            transforms.ToTensor(),
+            normalize
+        ])
 
     val_loader = torch.utils.data.DataLoader(datasets.ImageFolder(valdir, combined_transform),
                                              batch_size=args.batch_size, shuffle=False,

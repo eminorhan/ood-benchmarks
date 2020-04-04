@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #SBATCH --nodes=1
-#SBATCH --exclude=vine3,vine8,vine11,vine12,vine13
+#SBATCH --exclude=hpc1,hpc2,hpc3,hpc4,hpc5,hpc6,hpc7,hpc8,hpc9,vine3,vine4,vine6,vine11,vine12,lion17,rose7,rose8,rose9
 ##SBATCH --ntasks=1
-#SBATCH --gres=gpu:4
+#SBATCH --gres=gpu:2
 ##SBATCH --cpus-per-task=1
-#SBATCH --mem=100GB
+#SBATCH --mem=16GB
 #SBATCH --time=12:00:00
 #SBATCH --array=0
 #SBATCH --job-name=sketch
@@ -26,20 +26,21 @@ source /home/eo41/venv/bin/activate
 #python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b2_ns' --im-size 260
 #python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b1_ns' --im-size 240
 #python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b0_ns' --im-size 224
-python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b8' --im-size 672
-python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b7' --im-size 600
-python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b6' --im-size 528
-python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b5' --im-size 456
-python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b4' --im-size 380
-python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b3' --im-size 300
-python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b2' --im-size 260
-python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b1' --im-size 240
-python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b0' --im-size 224
+#python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b8' --im-size 672
+#python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b7' --im-size 600
+#python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b6' --im-size 528
+#python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b5' --im-size 456
+#python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b4' --im-size 380
+#python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b3' --im-size 300
+#python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b2' --im-size 260
+#python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b1' --im-size 240
+#python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'tf_efficientnet_b0' --im-size 224
 #python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'resnext101_32x48d_wsl'
 #python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'resnext101_32x32d_wsl'
 #python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'resnext101_32x16d_wsl'
 #python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'resnext101_32x8d_wsl'
 #python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'resnext101_32x8d'
-
+python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'moco_v2'
+python -u /misc/vlgscratch4/LakeGroup/emin/oos_benchmarks/evaluate_imagenets.py '/misc/vlgscratch4/LakeGroup/emin/robust_vision/imagenet-sketch/' --model-name 'resnet50'
 
 echo "Done"

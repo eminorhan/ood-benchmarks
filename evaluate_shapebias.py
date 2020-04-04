@@ -18,7 +18,7 @@ parser.add_argument('--model-name', type=str, default='resnext101_32x16d_wsl',
                              'tf_efficientnet_b2_ns', 'tf_efficientnet_b1_ns', 'tf_efficientnet_b0_ns',
                              'tf_efficientnet_b8', 'tf_efficientnet_b7', 'tf_efficientnet_b6', 'tf_efficientnet_b5',
                              'tf_efficientnet_b4', 'tf_efficientnet_b3', 'tf_efficientnet_b2', 'tf_efficientnet_b1',
-                             'tf_efficientnet_b0'],
+                             'tf_efficientnet_b0', 'moco_v2', 'resnet50'],
                     help='evaluated model')
 parser.add_argument('--workers', default=4, type=int, help='no of data loading workers')
 parser.add_argument('--batch-size', default=36, type=int, help='mini-batch size')
