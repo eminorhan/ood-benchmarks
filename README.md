@@ -11,7 +11,7 @@ This repository contains code for evaluating the out-of-distribution generalizat
 The following models are currently evaluated:
 
 * `moco_v2`: State-of-the-art self-supervised [MoCo v2](https://github.com/facebookresearch/moco) model with ResNet-50 backbone (res: 224)
-* `resnet50`: Supervised ResNet-50 model (res: 224)
+* `resnet50`: Supervised ResNet-50 model trained with ImageNet labels (res: 224)
 * `resnext101_32x32d_wsl`: second largest ResNeXt-WSL model released by Facebook AI (res: 224)
 * `resnext101_32x48d_wsl`: the largest ResNeXt-WSL model released by Facebook AI (res: 224)
 * `resnext101_32x32d_wsl`: second largest ResNeXt-WSL model released by Facebook AI (res: 224)
